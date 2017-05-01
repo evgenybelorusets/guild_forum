@@ -1,3 +1,6 @@
 class PostsController < AuthenticatedController
-  def index; end
+  def index
+    p session["devise.bnet_data"]
+    p current_user
+  end
 end
