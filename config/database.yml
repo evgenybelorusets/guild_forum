@@ -4,11 +4,14 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
-
+  database: forum_development
+  username: postgres
+  password: postgres
 test:
   <<: *default
-  database: myapp_test
+  database: forum_test
+  username: postgres
+  password: postgres
 
 production:
   <<: *default
