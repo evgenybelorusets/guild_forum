@@ -3,14 +3,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     p request.env["omniauth.auth"]
 
     @user = User.from_omniauth(request.env["omniauth.auth"])
-    @user.save!
-
-    if @user.persisted?
-      sign_in_and_redirect @user
-    else
-      session["devise.bnet_data"] = request.env["omniauth.auth"]
-      redirect_to root_path
-    end
+    sign_in_and_redirect @user
   end
 
   def failure
