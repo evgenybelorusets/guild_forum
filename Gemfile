@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
 gem 'omniauth'
 gem 'omniauth-bnet'
+gem 'rbattlenet'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
